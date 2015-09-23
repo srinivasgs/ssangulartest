@@ -1,0 +1,280 @@
+body{
+	margin: 0px;
+	padding: 10px;
+	font-family:Helvetica Neue;
+	font-weight: 300;
+}
+.clear_both{ clear: both;}
+section{
+	width: 960px;
+	margin: 0px auto;
+}
+.site-search{
+	background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/search.png") no-repeat right;
+	width: 96%;
+	border:0px;
+	font-size: 15px;
+	background-size: 25px;
+	padding-right: 30px;
+
+}
+.site-menu a, .site-filter a, .site-show-list a{
+	text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0px 35px 0px 0px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    line-height: 55px;
+    color: #000000;
+    background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/down_arrow.png") no-repeat right 20px;
+    background-size: 22px;
+    margin-right:20px;
+}
+.site-filter{
+	margin-top: 40px;
+}
+.site-filter span.custom-dropdown, .site-show-list span.custom-dropdown{
+	font-size: 20px;
+	background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/down_arrow.png") no-repeat right 15px;
+    background-size: 22px;
+}
+
+.shoe-list{
+	display: inline-block;
+	margin-top: 40px;
+}
+.shoe-list li{
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	margin: 0px 20px 30px 0px;
+	position: relative;
+}
+.shoe-list li code{
+	background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/heart_normal.png") no-repeat;
+    background-size: 20px;
+    padding: 11px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    opacity: 0.2;
+	-khtml-opacity: 0.2;
+	-moz-opacity: 0.2;
+	filter: alpha(opacity=20);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+
+}
+.shoe-list li.active code{
+	background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/heart_active.png") no-repeat;
+	background-size: 20px;
+	opacity: 1;
+	-khtml-opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.shoe-list li img{
+	width: 300px;
+	margin-bottom: 10px;
+}
+.shoe-list li p{
+	font-size: 15px;
+	padding: 5px 0px;
+	font-weight: 400;
+}
+.shoe-list li span{
+	font-size: 13px;
+}
+
+.site-pagination{
+	display: table;
+	margin:40px auto;
+}
+.site-pagination li, .site-pagination-mob li{
+	float: left;
+	padding: 20px;
+	border:1px solid gray;
+	cursor: pointer;
+	border-width: 1px 1px 1px 0px;
+}
+.site-pagination li.first, .site-pagination-mob li.first{
+	border-width: 1px;
+}
+.site-pagination-mob{ display: none;}
+
+
+
+.search-list{
+	margin: 50px auto;
+	width: 720px;
+	padding: 20px 0px;
+	position: relative;
+}
+.search-list input[type="text"]{
+	border:0px;
+	padding: 15px 35px;
+	font-size: 30px;
+	width: 88%;
+	font-weight:bold;
+	background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/search.png") no-repeat left;
+	background-size: 25px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 15px;
+}
+.search-list span{
+	font-size: 15px;
+    font-weight: bold;
+    line-height: 50px;
+    color: gray;
+}
+.search-list code.search-list_close{
+	background: url(https://commondatastorage.googleapis.com/images2.solestruck.com/gae/newdesign/images/icon_set.png) 0 -350px no-repeat;
+    padding: 8px 9px 8px;
+    margin: 0px;
+    position: absolute;
+    z-index: 999999;
+    right: 20px;
+    top: 45px;
+    cursor: pointer;
+}
+
+.search-list li{
+	font-size: 18px;
+	font-weight:bold;
+	line-height: 35px;
+	cursor: pointer;
+}
+
+
+/*** custome dropdown code start here ***/
+.custom-dropdown{
+	position: relative;
+	cursor: pointer;
+	text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    /*float: left;*/
+    padding-right: 30px;
+    display: inline-block;
+    background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/down_arrow.png") no-repeat right 26px;
+    background-size: 22px;
+    border-bottom: 1px dashed #000000;
+    margin-right: 5px;
+}
+.custom-dropdown div {
+	/*position: absolute;*/
+	width: 100%;
+	text-align: left;
+	padding: 12px 0px 12px 10px;
+	cursor: pointer;
+}
+.custom-dropdown div i {
+	position: absolute;
+	right: 25px;
+	top: 13px;
+}
+.custom-dropdown select {
+	position: absolute;
+	height: 64px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	font-size: 14px;
+	border: 0px;
+	outline: 0px;
+	opacity: 0;
+	-khtml-opacity: 0.0;
+	-moz-opacity: 0.0;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	cursor: pointer;
+}
+/*** custome dropdown code end here ***/
+
+
+/* responsive design for big monitor */
+@media only screen and (min-width : 1441px)   {
+ 	section{
+		width: 1440px;
+	}
+	.shoe-list li img{
+		width: 340px;
+		margin-bottom: 10px;
+	}
+}
+
+
+/* responsive design for mbile device */
+@media only screen and (max-width : 480px)   {
+ 	section{
+		width: 100%;
+	}
+	.site-search{
+		width: 92%;
+		margin: 0px 0px 20px;
+	}
+	.shoe-list li img{
+		width: 340px;
+		margin-bottom: 10px;
+	}
+
+	.site-menu span.custom-dropdown, .site-filter span.custom-dropdown{
+		font-size: 14px;
+		padding: 0px;
+		line-height: 5px;
+		font-weight: normal;
+		margin-right: 10px;
+		background: none;
+	}
+	.site-menu span.custom-dropdown select, .site-filter span.custom-dropdown select{
+		height:25px;
+	}
+	.site-filter{
+		margin: 0px;
+	}
+
+	.shoe-list{ margin-top: 20px;}
+	.shoe-list li{
+		margin: 0px 10px 30px 0px;
+	}
+	.shoe-list li code{
+		top: 10px; 
+		right:5px;
+    	background-size: 15px;
+	}
+	.shoe-list li.active code{
+		top: 10px; 
+		right:5px;
+    	background-size: 15px;
+	}
+	.shoe-list li img{
+		width: 142px;
+	}
+	.shoe-list li span, .shoe-list--title{ display: none;}
+	.shoe-list li p{
+		font-size: 12px;
+	}
+	.shoe-list li.shoe-list__shoe-two, .shoe-list li.shoe-list__shoe-four{
+		margin-right: 0px;
+	} 
+
+	.site-show-list span.custom-dropdown{
+		display: inline-block;
+		background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/down_arrow.png") no-repeat right 10px;
+    	background-size: 22px;
+    	padding: 0px 25px 0px 0px;
+    	line-height: 10px;
+    	margin-right:0px; 
+	}
+	.site-pagination{ display: none;}
+	.site-pagination-mob{ 
+		display: block;
+		margin: 30px auto;
+	}
+	.site-pagination-mob li{ 
+		width: 35%;
+    	text-align: center;
+	}
+}
