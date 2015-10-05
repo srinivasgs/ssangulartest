@@ -12,7 +12,7 @@
     <script type="text/javascript" src="js/action.js"></script>
     
 </head>
-    <body>
+    <body ng-controller="NewArrivalController as arrivCtrl">
         <section>
             <header>
                 <input type="text" value="" name="" class="site-search"/>
@@ -45,10 +45,21 @@
                         <p>All Colors</p>
                         <i class="fa fa-caret-down"></i>
                     </div>
+                    <!-- <div ng-repeat="colorName in arrivCtrl.colorNameData" >
+                        {{colorName}}
+
+                    </div> -->
                     <select class="custom_select_value_act" name="" id="">
-                        <option value="">sample</option>
-                        <option value="">sample test </option>
-                    </select>
+
+                        <!-- <option class="custom_select_value_act" name="" id="" ng-repeat="colorName in arrivCtrl.colorNameData" value="">
+                            {{colorName}}
+
+                        </option> -->
+                    </select> 
+                   <!--  <select ng-model="filterCondition.operator" ng-options="operator.value as operator for operator in arrivCtrl.colorNameData">
+                    
+                    </select> -->
+
                 </span><!--dropdown_holder -->
 
                 <span class="custom-dropdown">
@@ -100,129 +111,23 @@
             <!-- site-filter -->
             <div class="shoe-list">
                 <ul>
-                    <li>
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/adidas-x-jeremy-scott-shoes/Adidas-X-Jeremy-Scott-shoes-Wings-BBall-Mens-(Red)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Preorder</p>
-                    </li>
-                    <li class="shoe-list__shoe-two">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/grey-city-shoes/Grey-City-shoes-West-(Cabernet)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
-                    <li class="shoe-list__shoe-three">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/dear-frances-shoes/Dear-Frances-shoes-Fly-Boot-(Caramel)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Out Of Stock</p>
-                    </li>
-                    <li class="shoe-list__shoe-four">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/puma-black-x-alexander-mcqueen-shoes/Puma-Black-X-Alexander-McQueen-shoes-McQ-Disc-Mens-(Grey-Quarry-Surf-The-Web)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
 
-                    <li class="active">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/puma-x-stamped-shoes/Puma-X-Stamped-shoes-Trinomic-Sock-Mens-(Drizzle)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Preorder</p>
-                    </li>
-                    <li class="shoe-list__shoe-two">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/puma-shoes/Puma-shoes-Disc-89-Metal-Womens-(Crystal-Pink)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
-                    <li class="shoe-list__shoe-three">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/y.r.u.-shoes/Y.R.U.-shoes-Labyrinth-Hi-(Red)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Out Of Stock</p>
-                    </li>
-                    <li class="shoe-list__shoe-four active">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/miista-shoes/Miista-shoes-Beau-(Red-Red)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
+                    <div >
+                    
+                        <li ng-repeat="Arrivaldata in arrivCtrl.content" >
+                               
+                               <code></code>
+                               <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/{{Arrivaldata.vendorName | replacementFilter}}-shoes/{{Arrivaldata.vendorName | replacementhipen}}-shoes-{{Arrivaldata.productName | replacementhipen }}-({{Arrivaldata.colorName | replacementhipen}})-010407.jpg" /> 
+                                 
+                                <p class="shoe-list--title">{{Arrivaldata.productName}}</p>
+                                <span>{{Arrivaldata.vendorName | replacementFilter}}</span>
+                                <p>{{Arrivaldata.retailPrice| currency}} - Preorder</p>
+                        </li>
+                    </div>
 
-                    <li>
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/vagabond-shoes/Vagabond-shoes-Tyra-4032-101-(Saddle)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Preorder</p>
-                    </li>
-                    <li class="shoe-list__shoe-two">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/abcense-shoes/Abcense-shoes-Square-Root-(Navy-Grey)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
-                    <li class="shoe-list__shoe-three">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/adidas-originals-shoes/Adidas-Originals-shoes-Tubular-X-Mens-(Red)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Out Of Stock</p>
-                    </li>
-                    <li class="shoe-list__shoe-four">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/dr.-martens-x-adventure-time-shoes/Dr.-Martens-X-Adventure-Time-shoes-Castel-Womens-(Finn-Print)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
-
-                    <li>
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/new-kid-shoes/New-Kid-shoes-Claude-Form-(Mustard-Bone)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Preorder</p>
-                    </li>
-                    <li class="shoe-list__shoe-two active">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/jennifer-chou-shoes/Jennifer-Chou-shoes-Topanga-2.0-(Neon-Yellow)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
-                    <li class="shoe-list__shoe-three">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/jeffrey-campbell-shoes/Jeffrey-Campbell-shoes-Finon-(Green-Stripe-Combo-White)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96 - Out Of Stock</p>
-                    </li>
-                    <li class="shoe-list__shoe-four">
-                        <code></code>
-                        <img src="https://commondatastorage.googleapis.com/images2.solestruck.com/jeffrey-campbell-shoes/Jeffrey-Campbell-shoes-Calhoun-(White-Silver)-010807.jpg" />                    
-                        <p class="shoe-list--title">Flatform Universal</p>
-                        <span>Teva</span>
-                        <p>$139.96</p>
-                    </li>
                 </ul>
             </div>
-            <div ng-controller="ContentCtrl as dataJson">
-                <p>vendorName : {{dataJson.vendorName}} </p> 
-                <content-item ng-repeat="vendorName in dataJson.content" content="vendorName">
 
-                </content-item>
-            </div>
             <nav class="site-show-list" align="center">
                 <!-- <a href="javascript:void(0)">Show 50 At A Time</a>
                 <a href="javascript:void(0)">Show In-Stock Only</a> -->

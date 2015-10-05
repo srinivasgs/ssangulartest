@@ -106,47 +106,6 @@ section{
 
 
 
-.search-list{
-	margin: 50px auto;
-	width: 720px;
-	padding: 20px 0px;
-	position: relative;
-}
-.search-list input[type="text"]{
-	border:0px;
-	padding: 15px 35px;
-	font-size: 30px;
-	width: 88%;
-	font-weight:bold;
-	background: url("https://storage.googleapis.com/images2.solestruck.com/gae/newdesign/search.png") no-repeat left;
-	background-size: 25px;
-	border-bottom: 1px solid gray;
-	margin-bottom: 15px;
-}
-.search-list span{
-	font-size: 15px;
-    font-weight: bold;
-    line-height: 50px;
-    color: gray;
-}
-.search-list code.search-list_close{
-	background: url(https://commondatastorage.googleapis.com/images2.solestruck.com/gae/newdesign/images/icon_set.png) 0 -350px no-repeat;
-    padding: 8px 9px 8px;
-    margin: 0px;
-    position: absolute;
-    z-index: 999999;
-    right: 20px;
-    top: 45px;
-    cursor: pointer;
-}
-
-.search-list li{
-	font-size: 18px;
-	font-weight:bold;
-	line-height: 35px;
-	cursor: pointer;
-}
-
 
 /*** custome dropdown code start here ***/
 .custom-dropdown{
